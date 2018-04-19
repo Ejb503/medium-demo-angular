@@ -1,0 +1,118 @@
+@import '../../../core.scss';
+
+mat-toolbar {
+    position: fixed;
+    top:0;
+    z-index: 999;
+    box-shadow: none;
+    transition: box-shadow 0.3s ease-in-out;
+
+    &.static {
+         box-shadow: rgba(0, 0, 0, 0.137255) 0px 4px 5px 0px, rgba(0, 0, 0, 0.117647) 0px 1px 10px 0px, rgba(0, 0, 0, 0.2) 0px 2px 4px -1px
+    }
+}
+
+.user-information {
+    float: left;
+    .user-information__row {
+        float: left;
+    }
+    .user-avatar {
+        -webkit-background-size: 32px 32px;
+        background-size: 32px 32px;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        display: block;
+        margin: 0;
+        overflow: hidden;
+        position: relative;
+        height: 32px;
+        width: 32px;
+        z-index: 0;
+    }
+}
+
+
+.icons {
+    float: right;
+    .icon-container {
+        width: 40px;
+        float: right;
+        height: 40px;
+        padding: 10px;
+    }
+    span, .mat-button, .mat-icon-button, .mat-raised-button, a {
+    	color: white;
+        cursor: pointer;
+        float: left;
+        &.user-login {
+            margin-right: 30px;
+        }
+    }
+}
+
+/*img {
+	border-radius: 50%;
+    height: 28px;
+    width: 28px;
+    float: right;
+    margin: 8px 0 0;
+}
+*/
+.menu-button {
+	font-size: 20px;
+	color: white;
+}
+
+h3.menu-dropdown {
+    padding-left: 5px;
+    text-transform: uppercase;
+    margin: 0 2px 0px 0px;
+    padding: 0px 0 5px 15px;	
+    border-bottom: solid 5px $primary-color;
+}
+
+a.link.menu_item {
+	text-decoration: none;
+	line-height: 2.9;
+	color: $primary-color;
+}
+
+
+@media only screen and (min-width: 840px) {
+    .logo {
+        float: left;
+        padding: 5px 0;
+        img {
+            height: 50px;
+        }
+    }
+    .icons {
+        padding-top: 20px;
+    }
+}
+
+
+@media only screen and (max-width: 840px) {
+    .logo {
+        float: left;
+        padding: 15px 0px 0px;
+        img {
+            width: 185px;
+        }
+    }
+
+    .container-fluid.hero {
+        padding: 10px 0;
+    }
+    .section__hero__block {
+        margin: 10px 0;
+    }
+    mat-form-field {
+        margin: 20px 0;
+    }
+    mat-card { 
+        margin-bottom: 15px;
+    }
+}
+
